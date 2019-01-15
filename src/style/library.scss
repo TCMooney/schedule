@@ -1,18 +1,38 @@
 .library {
     grid-column: library-s/library-e;
     grid-row: 1/-1;
-    display: grid;
-    grid-template-rows: [title-s] 100px [title-e course-s] repeat(auto-fit, 1fr) [course-e];
-    grid-row-gap: 22px;
-    padding-left: 100px;
-    padding-top: 100px;
+    
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 
-    &__title {
-        color: $color-blue;
-        font-family: $font-alegreya;
-        font-size: 34px;
-        font-weight: bold;
-        border-left: 2px solid $color-blue;
-        padding: 20px 40px;
+    position: relative;
+
+    &__container {
+
+        display: grid;
+        grid-template-rows: [title-s] 100px [title-e course-s] repeat(auto-fit, 1fr) [course-e];
+        grid-row-gap: 22px;
+
+        padding-top: 7%;
+        padding-left: 5%;
+        padding-bottom: 76px;
+        overflow-y: scroll;
+
+        height: 100%;
+        width: 100%;
+
+        right: -15px;
+
+        position: absolute;
+
+        &__title {
+            color: $color-blue;
+            font-family: $font-alegreya;
+            font-size: 34px;
+            font-weight: bold;
+            border-left: 2px solid $color-blue;
+            padding: 20px 40px;
+        }
     }
  }
